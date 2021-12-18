@@ -34,6 +34,15 @@ class MovieCell: UITableViewCell {
 
     func configure(movie: Result) {
         movieName.text = movie.title
+        movieRating.text = "Rating: \(movie.voteAverage) "
+        let completeURl = "https://image.tmdb.org/t/p/w500" + "\(movie.posterPath)"
+        if let url = URL(string: completeURl) {
+            ImageDownloaderService.fetchImage(url: url) { [weak self](image, returnUrl) in
+                if returnUrl == url {
+                    self?.movieImageView.image = image
+                }
+            }
+        }
     }
     
 }
