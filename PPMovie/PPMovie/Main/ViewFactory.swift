@@ -25,8 +25,10 @@ class ViewFactory: ViewFactoryProtocol{
     }
 
     private func createMainViewController() -> UIViewController {
-        let vc = MovieViewController(nibName: "MovieViewController", bundle: nil)
-        vc.title = "Movie Lsit"
-        return vc
+        let networkService = NetworkManager()
+        let viewModel = MovieViewModel(networtkService: networkService)
+        let viewController = MovieViewController(viewModel: viewModel)
+        viewController.title = "Movie Lsit"
+        return viewController
     }
 }
