@@ -11,7 +11,7 @@ import UIKit
 protocol ImageDownloaderServiceProtocol {
 
 }
-struct ImageDownloaderService {
+struct ImageDownloaderService: ImageDownloaderServiceProtocol {
     static func fetchImage(url:URL, completionBlock:@escaping((_ image: UIImage?, _ url: URL)->Void)) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {

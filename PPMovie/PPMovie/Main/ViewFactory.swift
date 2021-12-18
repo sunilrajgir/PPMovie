@@ -28,6 +28,7 @@ class ViewFactory: ViewFactoryProtocol{
         let networkService = APIService()
         let viewModel = MovieViewModel(networtkService: networkService)
         let viewController = MovieViewController(viewModel: viewModel)
+        viewModel.delegate = viewController
         viewController.title = "Movie Lsit"
         return viewController
     }

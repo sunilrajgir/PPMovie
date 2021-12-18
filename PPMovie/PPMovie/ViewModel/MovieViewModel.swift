@@ -7,10 +7,26 @@
 
 import Foundation
 
+enum ScreenStatus {
+    case loader
+    case networkError
+    case serverError
+    case success
+}
+
+protocol MovieViewModelDelegate: NSObject {
+    func screenStatusChanged(status: ScreenStatus)
+}
+
 class MovieViewModel {
     let networtkService:APIServiceProtocol
-
     var movieList = [Result]()
+    weak var delegate: MovieViewModelDelegate?
+    var screenStatus : ScreenStatus = .loader {
+        didSet {
+            screenStatusChanged()
+        }
+    }
     init(networtkService: APIServiceProtocol) {
         self.networtkService = networtkService
     }
@@ -21,5 +37,9 @@ class MovieViewModel {
                 self?.movieList = results
             }
         }
+    }
+
+    func screenStatusChanged() {
+        delegate?.screenStatusChanged(status: screenStatus)
     }
 }

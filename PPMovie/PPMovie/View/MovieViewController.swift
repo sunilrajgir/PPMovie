@@ -33,7 +33,16 @@ class MovieViewController: UIViewController {
         }
     }
 
-    func bindData() {
+    private func showLoader() {
+
+    }
+
+    private func hideLoader() {
+
+    }
+
+
+    private func bindData() {
         tableView.reloadData()
     }
 
@@ -64,5 +73,11 @@ extension MovieViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
+    }
+}
+
+extension MovieViewController: MovieViewModelDelegate {
+    func screenStatusChanged(status: ScreenStatus) {
+        // show loader, error, tableView on the basis of status
     }
 }
