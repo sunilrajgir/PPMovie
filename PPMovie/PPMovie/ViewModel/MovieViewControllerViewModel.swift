@@ -18,7 +18,7 @@ protocol MovieViewModelDelegate: NSObject {
     func screenStatusChanged(status: ScreenStatus)
 }
 
-class MovieViewModel {
+class MovieViewControllerViewModel {
     let networtkService:APIServiceProtocol
     var movieList = [Result]()
     weak var delegate: MovieViewModelDelegate?

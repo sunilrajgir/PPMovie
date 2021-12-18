@@ -9,8 +9,8 @@ import UIKit
 
 class MovieViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var viewModel : MovieViewModel!
-    convenience init(viewModel: MovieViewModel) {
+    var viewModel : MovieViewControllerViewModel!
+    convenience init(viewModel: MovieViewControllerViewModel) {
         self.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
     }
