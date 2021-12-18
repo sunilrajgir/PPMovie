@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol NetworkManagerProtocol {
+protocol APIServiceProtocol {
     func fetchData(url: String, completionBlock:((_ data:Movie?, _ error: Error?)-> Void))
 }
 
-struct NetworkManager: NetworkManagerProtocol{
+struct APIService: APIServiceProtocol{
     func fetchData(url: String, completionBlock:((_ data:Movie?, _ error: Error?)-> Void)) {
         let jsonData = JSON.data(using: .utf8)!
         let movie: Movie = try! JSONDecoder().decode(Movie.self, from: jsonData)

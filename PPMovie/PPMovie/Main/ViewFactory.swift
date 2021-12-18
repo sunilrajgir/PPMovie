@@ -25,7 +25,7 @@ class ViewFactory: ViewFactoryProtocol{
     }
 
     private func createMainViewController() -> UIViewController {
-        let networkService = NetworkManager()
+        let networkService = APIService()
         let viewModel = MovieViewModel(networtkService: networkService)
         let viewController = MovieViewController(viewModel: viewModel)
         viewController.title = "Movie Lsit"

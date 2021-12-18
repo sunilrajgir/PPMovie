@@ -8,10 +8,10 @@
 import Foundation
 
 class MovieViewModel {
-    let networtkService:NetworkManagerProtocol
+    let networtkService:APIServiceProtocol
 
     var movieList = [Result]()
-    init(networtkService: NetworkManagerProtocol) {
+    init(networtkService: APIServiceProtocol) {
         self.networtkService = networtkService
     }
 
