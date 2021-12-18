@@ -20,7 +20,7 @@ protocol MovieViewModelDelegate: NSObject {
 
 class MovieViewControllerViewModel {
     let networtkService:APIServiceProtocol
-    var movieList = [Result]()
+    var movieList = [MovieCellModel]()
     weak var delegate: MovieViewModelDelegate?
     var screenStatus : ScreenStatus = .loader {
         didSet {
@@ -33,10 +33,14 @@ class MovieViewControllerViewModel {
 
     func getData(completionBlock: (()->Void)) {
         networtkService.fetchData(url: "abc") { [weak self](data, error) in
-            if let results = data?.results {
-                self?.movieList = results
+            if let data = data {
+                self?.processData(data: data)
             }
         }
+    }
+
+    private func processData(data: Movie) {
+        movieList =  data.results.map{MovieCellModel(movieEntity: $0)}
     }
 
     func screenStatusChanged() {

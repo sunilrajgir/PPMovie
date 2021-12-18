@@ -24,6 +24,8 @@
 		43974897276E087C000583F7 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43974895276E087C000583F7 /* MovieViewController.xib */; };
 		43974899276E0C3F000583F7 /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43974898276E0C3F000583F7 /* ImageDownloaderService.swift */; };
 		4397489B276E14C4000583F7 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397489A276E14C4000583F7 /* MovieCellViewModel.swift */; };
+		4397489D276E1506000583F7 /* MovieViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397489C276E1506000583F7 /* MovieViewControllerModel.swift */; };
+		4397489F276E1522000583F7 /* MovieCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4397489E276E1522000583F7 /* MovieCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		43974895276E087C000583F7 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		43974898276E0C3F000583F7 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
 		4397489A276E14C4000583F7 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
+		4397489C276E1506000583F7 /* MovieViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewControllerModel.swift; sourceTree = "<group>"; };
+		4397489E276E1522000583F7 /* MovieCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 		43974878276E001F000583F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4397489C276E1506000583F7 /* MovieViewControllerModel.swift */,
+				4397489E276E1522000583F7 /* MovieCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +238,8 @@
 				4397487F276E0078000583F7 /* ViewFactory.swift in Sources */,
 				43974864276DFFB1000583F7 /* SceneDelegate.swift in Sources */,
 				4397488E276E06BF000583F7 /* MovieCell.swift in Sources */,
+				4397489D276E1506000583F7 /* MovieViewControllerModel.swift in Sources */,
+				4397489F276E1522000583F7 /* MovieCellModel.swift in Sources */,
 				43974899276E0C3F000583F7 /* ImageDownloaderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

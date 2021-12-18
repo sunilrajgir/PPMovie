@@ -33,15 +33,6 @@ class MovieViewController: UIViewController {
         }
     }
 
-    private func showLoader() {
-
-    }
-
-    private func hideLoader() {
-
-    }
-
-
     private func bindData() {
         tableView.reloadData()
     }
