@@ -38,5 +38,8 @@ class MovieCell: UITableViewCell {
             }
         }
     }
-    
+    @IBAction func starAction(_ sender: UIButton) {
+
+    }
+
 }

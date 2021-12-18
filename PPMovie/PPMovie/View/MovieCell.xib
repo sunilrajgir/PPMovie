@@ -36,6 +36,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Star"/>
+                                <connections>
+                                    <action selector="starAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="snP-eV-BD9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq4-ta-dmX">
                                 <rect key="frame" x="8" y="8" width="230" height="50"/>

@@ -29,6 +29,4 @@ final class NavigationRouter {
     func openMainViewController() {
         setRootViewController(viewFactory.createView(viewType: .main))
     }
-
-
 }

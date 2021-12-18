@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class MovieViewControllerModel {
+    var movieList = [MovieCellModel]()
+    init(movieList: [MovieCellModel]) {
+        self.movieList = movieList
+    }
+}

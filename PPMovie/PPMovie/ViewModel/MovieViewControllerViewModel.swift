@@ -20,6 +20,7 @@ protocol MovieViewModelDelegate: NSObject {
 
 class MovieViewControllerViewModel {
     let networtkService:APIServiceProtocol
+    var model: MovieViewControllerModel? // TODO: Process Data and this property
     var movieList = [MovieCellModel]()
     weak var delegate: MovieViewModelDelegate?
     var screenStatus : ScreenStatus = .loader {
